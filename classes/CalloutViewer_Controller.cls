@@ -21,7 +21,7 @@ public with sharing class CalloutViewer_Controller {
         responseBody = res.getBody();
     }
 
-    public void deserializedQuestions() {
+    public void deserializeQuestionsFromResponse() {
         if (String.isNotBlank(responseBody)) {
             response = (StackExchangeAPI.ResponseResource) JSON.deserialize(responseBody, StackExchangeAPI.ResponseResource.class);
             deserializedQuestions = response.items;

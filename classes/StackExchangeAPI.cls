@@ -40,7 +40,7 @@ public with sharing class StackExchangeAPI {
     public  class QuestionResource {
         public List<String> tags {get; set;}
         public UserResource owner {get; set;}
-        public Boolean isAnswered {get; set;}
+        public Boolean is_answered {get; set;}
         public Integer view_count {get; set;}
         public Integer answer_count {get; set;}
         public Integer score {get; set;}
@@ -54,8 +54,8 @@ public with sharing class StackExchangeAPI {
 
     // User 
     public class UserResource {
-        public Integer reputation {get; set;}
-        public Integer user_id {get; set;}
+        public String reputation {get; set;}
+        public String user_id {get; set;}
         public String user_type {get; set;}
         public String profile_image {get; set;}
         public String display_name {get; set;}
