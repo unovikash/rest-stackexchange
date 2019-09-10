@@ -6,10 +6,10 @@
     <apex:pageBlock >
         <apex:pageBlockButtons >
             <apex:commandButton value="Callout" action="{!callout}" rendered="{! $CurrentPage.parameters.offline!='1'}"/>
-            <apex:commandButton value="Deserialize" action="{! deserializedQuestions }" rendered="{! $CurrentPage.parameters.offline!='1'}" />
+            <apex:commandButton value="Deserialize" action="{! deserializeQuestionsFromResponse }" rendered="{! $CurrentPage.parameters.offline!='1'}" />
             
             <apex:commandButton value="Callout (Offline)" action="{!callout}" rendered="{! $CurrentPage.parameters.offline=='1'}"/>
-            <apex:commandButton value="Deserialize (Offline)" action="{! deserializedQuestions }" rendered="{! $CurrentPage.parameters.offline=='1'}" />
+            <apex:commandButton value="Deserialize (Offline)" action="{! deserializeQuestionsFromResponse }" rendered="{! $CurrentPage.parameters.offline=='1'}" />
         </apex:pageBlockButtons>
         
         <!-- Request -->
